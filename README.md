@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repo implements the **Auditory Conditioned Hallucinations (ACH) task with voice control cues**. The task presents participants with a series of blocks, each containing trials with both auditory and visual stimuli and exploits associative learning to induce auditory hallucinations, with cues to elicit, inhibit, or remain neutral to study control over these percepts. The fixation cross color is controlled at the block level according to the in-person variant (CONFIRM):
+This repo implements the **Auditory Conditioned Hallucinations (ACH) task with voice control cues**. The task presents participants with a series of blocks, each containing trials with both auditory and visual stimuli, and exploits associative learning to induce auditory hallucinations, with cues to elicit, inhibit, or remain neutral toward these induced percepts. The fixation cross color cues these states, controlled at the block level according to the in-person variant (CONFIRM):
 
 - **Blocks 1 & 2:** Use a constant fixation cross color (e.g., `"default"`).
 - **Blocks 3, 4, 5:** Use a randomized, block-specific order of fixation cross colors (e.g., `"gray"`, `"green"`, `"red"`), with the order fixed per block.
