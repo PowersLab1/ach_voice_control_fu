@@ -35,12 +35,26 @@ The app collects participant responses and confidence ratings, manages state wit
 
 ### Block 1 & 2 Example:
 ```jsx
-
+<Trial
+  decibels={this.state.decibels}
+  shouldRecordRatings={true}
+  trialCompleteRenderer={this.trialCompleteRenderer}
+  dataHandler={this.dataHandler}
+  blockIdx={TRIAL_NUM}
+  constantCrossColor="default" // or "gray", "black", etc.
+/>
 ```
 
 ### Blocks 3, 4, 5 Example:
 ```jsx
-
+<Trial
+  decibels={this.state.decibels}
+  shouldRecordRatings={true}
+  trialCompleteRenderer={this.trialCompleteRenderer}
+  dataHandler={this.dataHandler}
+  blockIdx={TRIAL_NUM}
+  // No constantCrossColor prop
+/>
 ```
 
 - **Trial Component Logic:**
