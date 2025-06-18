@@ -42,6 +42,8 @@ const RATING_KEY_CODES = _.map(_.keys(KEY_CODE_TO_RATING), (k) =>
 );
 const VISUAL_STIMULUS_MS = 1000;
 const STIMULUS_MS = 1000;
+const TRIALS_PER_MINIBLOCK = 30;
+
 
 class Trial extends Component {
   /********************************
@@ -123,8 +125,6 @@ class Trial extends Component {
     this.prevKey = null;
   }
 
-  // ... all your existing methods remain unchanged ...
-
   render() {
     // Something went wrong, so we redirect to error page.
     if (this.state.invalid) {
@@ -150,8 +150,8 @@ class Trial extends Component {
               showContrast={this.state.showContrast}
               showRatings={this.state.ratingWindow}
               currentRating={this.state.currentRating}
-              // --- Fixation Cross Color Logic (added, non-destructive) ---
-              crossColor={this.crossColorOrder[this.state.index % 3]}
+              // --- Fixation Cross Color Logic --- //
+              crossColor={this.crossColorOrder[Math.floor(this.state.index / TRIALS_PER_MINIBLOCK)]}
             />
           </div>
         ) : (
@@ -166,8 +166,6 @@ class Trial extends Component {
       </div>
     );
   } // end render
-
-  // ... all your existing methods remain unchanged ...
 }
 
 Trial.defaultProps = {
