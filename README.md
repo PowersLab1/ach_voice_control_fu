@@ -82,8 +82,8 @@ The app collects participant responses and confidence ratings, manages state wit
 
 | Block Type       | What to Pass to ``              | What Happens                |
 |------------------|------------------------------------------|-----------------------------|
-| Constant color   | `blockIdx`, `constantCrossColor`         | All miniblocks: same color  |
-| Randomized color | `blockIdx` only                          | Random order, fixed per blk |
+| Constant color   | `blockIdx`, `constantCrossColor`         | Blocks 1-2 |
+| Randomized color | `blockIdx` only                          | Random order, fixed for each of three mini-blocks within Blocks 3-5 |
 
 ---
 
@@ -100,7 +100,7 @@ The app collects participant responses and confidence ratings, manages state wit
 - **Start the app** as described above.
 - **Verify fixation cross color logic:**
   - Blocks 1 & 2 should always show the same cross color.
-  - Blocks 3–5 should each have their own unique, randomized color order for the fixation cross, consistent within the block.
+  - Blocks 3–5 should each have their own unique, randomized color order for the fixation cross, consistent within each mini-block.
 
 ---
 
