@@ -2,10 +2,10 @@
 
 ## Overview
 
-This repo implements the **Auditory Conditioned Hallucinations (ACH) task with voice control cues**. The task presents participants with a series of blocks, each containing trials with both auditory and visual stimuli, and exploits associative learning to induce auditory hallucinations, with cues to elicit, inhibit, or remain neutral toward these induced percepts. The fixation cross color cues these states, controlled at the block level according to the in-person variant (CONFIRM):
+This repo implements the **Auditory Conditioned Hallucinations (ACH) task with voice control cues**. The task presents participants with a series of blocks, each containing trials with both auditory and visual stimuli, and exploits associative learning to induce auditory hallucinations, with cues to elicit, inhibit, or remain neutral toward these induced percepts. The fixation cross color cues these states, controlled at the mini-block level according to the in-person variant:
 
 - **Blocks 1 & 2:** Use a constant fixation cross color (e.g., `"default"`).
-- **Blocks 3, 4, 5:** Use a randomized, block-specific order of fixation cross colors (e.g., `"gray"`, `"green"`, `"red"`), with the order fixed per block.
+- **Blocks 3, 4, 5:** Use a block-specific order of fixation cross colors (e.g., `"gray"`, `"green"`, `"red"`), with the specific sequence randomized over mini-blocks, of which there are three per block.
 
 The app collects participant responses and confidence ratings, manages state with Redux, and sends data to REDCap via AWS Lambda.
 
